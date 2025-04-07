@@ -1,6 +1,6 @@
-# ArtSeven
+# Cinephile
 
-# art-seven
+# art-seven / cinephile
 
 Este projeto tem como objetivo a criação de um site de revisões e críticas sobre cinema, com sessões do site dedicadas a login/formulário, críticas gerais e detalhes perdidos sobre filmes. 
 
