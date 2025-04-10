@@ -2,9 +2,9 @@
 
 # art-seven / cinephile
 
-Este projeto tem como objetivo a criação de um site de revisões e críticas sobre cinema, com sessões do site dedicadas a login/formulário, críticas gerais e detalhes perdidos sobre filmes. 
+Este projeto tem como objetivo a criação de uma aplicação de controle de filmes e séries, com funcionalidades de formulário para registro, listagem e organização, controle de progresso e avaliação de comentários e detalhes.
 
-O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
+O frontend da aplicação está sendo desenvolvido com Angular e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 ## Endereço de Deploy - GitHub Pages
 
