@@ -8,7 +8,7 @@ O frontend da aplicação está sendo desenvolvido com Angular e o backend foi s
 
 ## Endereço de Deploy - GitHub Pages
 
-[https://utfpr-gp.github.io/](https://github.com/lucashajime/ArtSeven)
+[https://utfpr-gp.github.io/](https://github.com/lucashajime/cinephile)
 
 ## Protótipo
 
