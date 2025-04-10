@@ -1,0 +1,93 @@
+<div class="container contact">
+  <h5>Doação</h5>
+  <h6>
+    É importante informar que não cobramos taxas para doações, esteja à vontade
+    para doar o que o seu coração mandar!
+  </h6>
+  <hr />
+  <h5>TOTAL JÁ DOADO, DOE TAMBÉM!</h5>
+  <app-balance-panel [value]="this.totalDonations"></app-balance-panel>
+  Tempo: {{ time }}
+  <div class="row">
+    <div class="col s12">
+      <div
+        class="card-panel white-text"
+        [hidden]="!this.message"
+        [class.red]="!this.success"
+        [class.blue]="this.success"
+      >
+        {{ this.message }}
+      </div>
+    </div>
+    <form class="col s12" (submit)="onSubmit()">
+      <div class="row">
+        <div class="col s12">
+          <select (change)="this.onSelectChange($event)">
+            <option value="-1" selected>Escolha um valor</option>
+            <option value="10">R$ 10,00</option>
+            <option value="25">R$ 25,00</option>
+            <option value="50">R$ 50,00</option>
+            <option value="100">R$ 100,00</option>
+            <option value="1000">R$ 1000,00</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input
+            name="input-donation"
+            type="text"
+            [(ngModel)]="this.donation.value"
+            (keydown.enter)="onEnterKey()"
+            mask="separator.2"
+            [thousandSeparator]="'.'"
+            [decimalMarker]="','"
+            prefix="R$ "
+            [dropSpecialCharacters]="true"
+            [showMaskTyped]="false"
+          />
+          <label class="active" for="input-donation">Valor de doação</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input
+            name="input-username"
+            type="text"
+            [(ngModel)]="this.donation.username"
+            pattern="^[a-z]+([\.-]?[a-z]+)*"
+            #username="ngModel"
+            required
+          />
+          <label class="active" for="input-username">Nome do usuário</label>
+        </div>
+      </div>
+      <button
+        class="btn waves-effect waves-light amber darken-4"
+        type="submit"
+        (click)="this.onButtonClick(); this.onButtonClickAgain()"
+      >
+        Doar
+        <i class="material-icons right">send</i>
+      </button>
+      <button
+        *ngIf="this.submitted"
+        style="margin-left: 10px"
+        class="btn waves-effect waves-light amber darken-4"
+        type="button"
+        (click)="this.onClickResetForm()"
+      >
+        Doar de novo!
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>
+  <router-outlet></router-outlet>
+  <!-- link home -->
+  <div id="painel-login" class="row">
+    <div class="col s12 m6 offset-m3 center">
+      <a routerLink="/"> VOLTAR AO MENU PRINCIPAL </a>
+    </div>
+  </div>
+  <!-- link home -->
+</div>
